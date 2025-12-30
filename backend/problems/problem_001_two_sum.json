@@ -1,0 +1,15 @@
+{
+  "id": 1,
+  "title": "Two Sum",
+  "slug": "two-sum",
+  "difficulty": "easy",
+  "description": "Given an array of integers `nums` and an integer `target`, return the indices of the two numbers that add up to `target`.\n\nYou may assume that each input has exactly one solution, and you may not use the same element twice.\n\nYou can return the answer in any order.",
+  "input_format": "First line contains n (the length of array) and target.\nSecond line contains n space-separated integers.",
+  "output_format": "Two space-separated integers representing the indices of the two numbers.",
+  "constraints": "2 ≤ n ≤ 10^4\n-10^9 ≤ nums[i] ≤ 10^9\n-10^9 ≤ target ≤ 10^9\nOnly one valid answer exists.",
+  "examples": "Input:\n4 9\n2 7 11 15\n\nOutput:\n0 1\n\nExplanation: nums[0] + nums[1] = 2 + 7 = 9, so we return [0, 1].",
+  "time_limit": 2,
+  "memory_limit": 256,
+  "tags": ["array", "hash-table", "two-pointers"],
+  "is_active": true
+}
