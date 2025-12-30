@@ -1,0 +1,134 @@
+{
+  "id": 4,
+  "title": "Valid Parentheses",
+  "slug": "valid-parentheses",
+  "difficulty": "easy",
+  "description": "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\n\nAn input string is valid if:\n1. Open brackets must be closed by the same type of closing brackets.\n2. Open brackets must be closed in the correct order.\n3. Every close bracket has a corresponding open bracket of the same type.",
+  "examples": [
+    {
+      "input": "\"()\"",
+      "output": "true",
+      "explanation": "The string contains a single pair of matching parentheses."
+    },
+    {
+      "input": "\"()[]{\\\"\\n}\"",
+      "output": "true",
+      "explanation": "The string contains matching pairs of all bracket types in correct order."
+    },
+    {
+      "input": "\"(]\"",
+      "output": "false",
+      "explanation": "The closing bracket does not match the type of opening bracket."
+    },
+    {
+      "input": "\"([)]\"",
+      "output": "false",
+      "explanation": "The brackets are not closed in the correct order."
+    },
+    {
+      "input": "\"{[}\"",
+      "output": "false",
+      "explanation": "The brackets are interleaved incorrectly."
+    }
+  ],
+  "constraints": {
+    "string_length": {
+      "min": 1,
+      "max": 10000
+    },
+    "characters": "Only '(', ')', '{', '}', '[' and ']'"
+  },
+  "function_signature": {
+    "language": "python",
+    "function_name": "isValid",
+    "parameters": [
+      {
+        "name": "s",
+        "type": "str"
+      }
+    ],
+    "return_type": "bool"
+  },
+  "function_signatures": {
+    "javascript": {
+      "function_name": "isValid",
+      "parameters": [
+        {
+          "name": "s",
+          "type": "string"
+        }
+      ],
+      "return_type": "boolean"
+    },
+    "java": {
+      "function_name": "isValid",
+      "class_name": "Solution",
+      "parameters": [
+        {
+          "name": "s",
+          "type": "String"
+        }
+      ],
+      "return_type": "boolean"
+    },
+    "cpp": {
+      "function_name": "isValid",
+      "parameters": [
+        {
+          "name": "s",
+          "type": "string"
+        }
+      ],
+      "return_type": "bool"
+    }
+  },
+  "test_cases": [
+    {
+      "input": "()\"",
+      "expected_output": true
+    },
+    {
+      "input": "()[]{\\\"\\n}",
+      "expected_output": true
+    },
+    {
+      "input": "(]",
+      "expected_output": false
+    },
+    {
+      "input": "([)]",
+      "expected_output": false
+    },
+    {
+      "input": "{[}",
+      "expected_output": false
+    },
+    {
+      "input": "\"",
+      "expected_output": true
+    },
+    {
+      "input": "((\\\"\\n)))",
+      "expected_output": false
+    }
+  ],
+  "hints": [
+    "Consider using a stack data structure to keep track of opening brackets.",
+    "When you encounter a closing bracket, check if it matches the most recent opening bracket.",
+    "If the stack is empty when you encounter a closing bracket, the string is invalid."
+  ],
+  "editorial": {
+    "approach": "Stack-based Solution",
+    "time_complexity": "O(n)",
+    "space_complexity": "O(n)",
+    "description": "Use a stack to match opening and closing brackets. For each character in the string, if it's an opening bracket, push it onto the stack. If it's a closing bracket, check if it matches the top of the stack. If it matches, pop from the stack; otherwise, return false. At the end, the stack should be empty for a valid string."
+  },
+  "tags": [
+    "stack",
+    "string",
+    "data-structures"
+  ],
+  "created_at": "2025-12-30T07:06:09Z",
+  "created_by": "Thrall12138",
+  "category": "data-structures"
+}
