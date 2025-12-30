@@ -1,0 +1,14 @@
+{
+  "id": 3,
+  "title": "Merge Sorted Array",
+  "slug": "merge-sorted-array",
+  "difficulty": "easy",
+  "description": "You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of valid elements in nums1 and nums2 respectively.\n\nMerge nums2 into nums1 as one sorted array.",
+  "input_format": "First line: m, n\nSecond line: m integers\nThird line: n integers",
+  "output_format": "m+n space-separated sorted integers",
+  "constraints": "0 ≤ m, n ≤ 200, -10^9 ≤ nums1[i], nums2[i] ≤ 10^9",
+  "time_limit": 2,
+  "memory_limit": 256,
+  "tags": ["array", "sorting", "two-pointers"],
+  "is_active": true
+}
